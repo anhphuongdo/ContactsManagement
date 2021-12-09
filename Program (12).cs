@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Collections;
 class program
-{xfdxgfxhxg
+{
     static void Main(string[] args)
     {
         Dictionary<string, danhba> danhb = new Dictionary<string, danhba>();
@@ -113,7 +113,7 @@ class program
         }
         kiet[t] = danhsachchan[t];
     }
-    // 4 ham tim kiem
+    
     static danhba vitri(int so, Dictionary<string, danhba> kiet)
     {
         int dem = 0;
@@ -130,6 +130,7 @@ class program
         }
         return new danhba("", "", "", "", "", "", "");
     }  
+    // 4 ham tim kiem
     static danhba seqsearch(Dictionary<string, danhba> danhb, string nhan)
     {
 
