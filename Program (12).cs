@@ -9,7 +9,7 @@ class program
         
         danhb.Add("1", new danhba("1", "VTK", "0906889483", "hungsamgnuyen", "vantuankiet", "22/07/2002","TP HCM"));
         danhb.Add("2", new danhba("2", "VTT", "0909678860", "taolanhat2200", "vantuquyen", "2/1/2002", "TP HCM"));
-        danhb.Add("3", new danhba("3", "kieotCK", "0907265337", "funfun1234", "lamquocnhan", "22/5/2002", "TP HCM"));
+        danhb.Add("3", new danhba("3", "kietCK", "0907265337", "funfun1234", "lamquocnhan", "22/5/2002", "TP HCM"));
         danhb.Add("4", new danhba("4", "CK", "0907265337", "funfun1234", "lamquocnhan", "22/5/2002", "TP HCM"));
         danhb.Add("5", new danhba("5", "444CK", "0907265337", "funfun1234", "lamquocnhan", "22/5/2002", "TP HCM"));
         
