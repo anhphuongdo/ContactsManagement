@@ -37,7 +37,7 @@ class program
             Console.WriteLine(kr.Value);
         }
     }
-    // tinh nang cho dic
+    // tinh nang cho dictinary
     static void InTTtrungthuong(Dictionary<string, danhba> kiet, int sotrung)
     {
         danhba g = sensearch(kiet,sotrung.ToString());
