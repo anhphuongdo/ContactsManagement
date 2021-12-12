@@ -22,8 +22,6 @@ class program
             Console.WriteLine(kr.Value);
         }
         // bai 2
-        string hehe = "";
-      //   timvaiso(danhb, ref hehe);
         // bai 3
         Dictionary<string, danhba> danhsachchan = new Dictionary<string, danhba>();
         chan(ref danhb, ref danhsachchan);
