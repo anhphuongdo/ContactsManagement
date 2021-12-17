@@ -39,8 +39,6 @@ class program
         Console.WriteLine(">> [TÀI KHOẢN] (3)");
         Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine(">> [IN RA DANH BẠ] (4)"); 
-        Console.ForegroundColor = ConsoleColor.Cyan;
-        System.Console.WriteLine(">> [THOÁT] (5)");
         Console.ForegroundColor = ConsoleColor.White;        
         Console.WriteLine("=================================");
         Console.Write("Chọn giao diện bạn muốn thực hiện: ");
@@ -132,8 +130,7 @@ class program
             case 4:
                 Console.WriteLine(">> [IN RA DANH BẠ] ");
                 inradanhba(danhb, danhsachchan, danhsach); break;
-            case 5: System.Console.WriteLine("Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi"); break;
-            default: System.Console.WriteLine("Bạn đã nhập sai số");break;
+            default: System.Console.WriteLine("Bạn đã nhập sai số"); break;
         }
         goto tim;
     }
