@@ -443,13 +443,14 @@ class program
             dem++;
         return dem;
     }
+    //11. Hàm in tài khoản
     static void Intaikhoan(Dictionary<string,danhba> kiet, ref danhba k){
         Console.Write("SĐT của bạn là: ");
         string so = Console.ReadLine();
          k = seqsearch(kiet,so);
         Console.WriteLine("Số tiền hiện có trong tài khoản của bạn là : {0} đồng", k.gettaikhoan());
     }
-    // 11. Nạp tiền vào sđt
+    // 12. Nạp tiền vào sđt
     static void Naptien(ref Dictionary<string,danhba> kiet, ref Dictionary<string, string> lichsuchuyentien, ref Dictionary<string, string> lichsunaptien)
     {
         danhba k = new danhba("","","","","","","",0);
@@ -501,7 +502,7 @@ class program
             }
         }
     }
-    //12. Chúc mừng sinh nhật
+    //13. Chúc mừng sinh nhật
     static void hpbd(Dictionary<string, danhba> hien, int thang)
     {
         int dem = 0;
@@ -534,7 +535,7 @@ class program
         if(dem == 0)
         Console.WriteLine("KHÔNG CÓ QUÝ KHÁCH SINH THÁNG {0}.",thang);
     }
-    //13. Mã OTP
+    //14. Mã OTP
     static string otp(Dictionary<string, danhba> hien, string sdt)
     {
         string otp1 = ""; 
@@ -619,7 +620,7 @@ class program
         }
         else Console.WriteLine("LỊCH SỬ TRỐNG ");
     } 
-    // 18.. 4 Hàm tìm kiếm 
+    // 18. hàm vị trí và 4 Hàm tìm kiếm 
     static danhba vitri(int so, Dictionary<string, danhba> kiet)
     {
         int dem = 0;
