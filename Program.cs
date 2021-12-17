@@ -308,11 +308,12 @@ class program
         string so = Console.ReadLine();
         int dodai = so.Length;
         int dem1 = 0;
+        Console.WriteLine("Danh sách các số có cùng {0} số {1} là: ", dodai, so);
         for(int i = 0; i < kiet.Count; i++)
         {
             if(vitri(i,kiet).getsdt().Substring(0,dodai) == so)
             {
-                Console.WriteLine("Danh sách các số có cùng {0} số {1} là: {2} ", dodai, so, vitri(i, kiet));
+                Console.WriteLine(vitri(i, kiet));
                 dem1++;
             }
         }
@@ -546,7 +547,7 @@ class program
     }
     //15.Xóa
     static void xoa(Dictionary<string, danhba> kiet){
-        Console.WriteLine("Nhập SĐT hoặc Tên hoặc ID cần xóa: ");
+        Console.WriteLine("Nhập SĐT hoặc Tên cần xóa: ");
         string dt = Console.ReadLine();
         danhba sotim = seqsearch(kiet, dt);
         Console.WriteLine("Bạn đã xóa thành công {0} ", sotim.getnhan());
