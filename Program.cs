@@ -547,7 +547,7 @@ class program
     }
     //15.Xóa
     static void xoa(Dictionary<string, danhba> kiet){
-        Console.WriteLine("Nhập SĐT cần xóa: ");
+        Console.WriteLine("Nhập SĐT hoặc Tên cần xóa: ");
         string dt = Console.ReadLine();
         danhba sotim = seqsearch(kiet, dt);
         Console.WriteLine("Bạn đã xóa thành công {0} ", sotim.getnhan());
@@ -567,13 +567,28 @@ class program
         danhba tamthoi = new danhba(id.ToString(), nhap[0], nhap[1], nhap[2], nhap[3], nhap[4],nhap[5],0);   
         foreach (KeyValuePair<string, danhba> at in kiet1)
         { 
-            if(at.Value.getsdt().Equals(tamthoi.getsdt()))
+            while (at.Value.getnhan().Equals(tamthoi.getnhan()) || at.Value.getsdt().Equals(tamthoi.getsdt())) 
             {
-                Console.Write("SĐT đã bị trùng, vui lòng nhập SĐT mới: ");
-                string sdtmoi = Console.ReadLine();
-                string tenmemmoi = tamthoi.getnhan();
-                tamthoi = new danhba(id.ToString(), tenmemmoi, sdtmoi, nhap[2], nhap[3], nhap[4],nhap[5],0);        
-            }  
+                foreach(KeyValuePair<string, danhba> kt in kiet1)
+             {
+                if(kt.Value.getnhan().Equals(tamthoi.getnhan()))
+                {
+                    Console.Write("Tên đã bị trùng, vui lòng nhập tên mới: ");
+                    string tenmoi = Console.ReadLine();
+                        string tenmoi2 = tenmoi;
+                    tamthoi = new danhba(id.ToString(), tenmoi, nhap[1], nhap[2], nhap[3], nhap[4], nhap[5], 0);          
+                        
+                }
+                if(kt.Value.getsdt().Equals(tamthoi.getsdt()))
+                {
+                    Console.Write("SĐT đã bị trùng, vui lòng nhập SĐT mới: ");
+                    string sdtmoi = Console.ReadLine();
+                    string tenmemmoi = tamthoi.getnhan();
+                    tamthoi = new danhba(id.ToString(), tenmemmoi, sdtmoi, nhap[2], nhap[3], nhap[4],nhap[5],0);
+                        
+                }
+             }  
+            }
         }
         kiet.Add(id.ToString(),tamthoi);
         Console.WriteLine("Đã thêm thành công!!!");
