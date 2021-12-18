@@ -675,19 +675,19 @@ class program
             return new danhba("", "", "", "", "", "", "", 0);
         }
     }
-    static danhba binsearch(Dictionary<string, danhba>hocsinh, string T)
+    static danhba binsearch(Dictionary<string, danhba> danhb, string T)
     {
         int m, L, R;
         L = 0;
-        R = hocsinh.Count - 1;
+        R = danhb.Count - 1;
         while (L <= R)
         {
             m = (L + R) / 2;
-            if (vitri(m, hocsinh).getid() == T)
+            if (vitri(m, danhb).getid() == T)
             {
-                return vitri(m,hocsinh);
+                return vitri(m,danhb);
             }
-            else if (Convert.ToInt32(vitri(m, hocsinh).getid()) < Convert.ToInt32(T))
+            else if (Convert.ToInt32(vitri(m, danhb).getid()) < Convert.ToInt32(T))
             {
                 L = m + 1;
             }
